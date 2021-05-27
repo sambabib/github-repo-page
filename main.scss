@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background: #010409;
+  
+  p {
+    color: white;
+  }
+
+  .search-tip {
+    border: 2px solid #0d419d;
+    background: rgba(56, 139, 253, 0.1);
+    color: #c9d1d9;
+    line-height: 1.5;
+    padding: 24px;
+    border-radius: 6px;
+    margin: 2rem;
+
+    img {
+        display: inline-block;
+        vertical-align: middle;
+        padding-right: 5px;
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 500;
+      font-family: 'Nunito Sans', sans-serif;
+    }
+  }
+
+  .search-bar {
+    padding: 2rem;
+
+    form {
+      border: 3px solid #161b22;
+      border-radius: 6px;
+      background: #0d1117;
+
+      input {
+        width: 230px;
+        padding: 1.5rem;
+        background: #0d1117;
+        color: #f0f6fc;
+        border: none;
+
+        &::placeholder {
+          font-size: 16px;
+          font-weight: 500;
+          font-family: 'Nunito Sans', sans-serif;
+        }
+      }
+
+      button {
+        padding: 10px 16px;
+        border: 2px solid #161b22;
+        border-radius: 6px;
+        background: transparent;
+        color: gray;
+      }
+    }
+  }
+
+  .header {
+    background: #161b22;
+    height: 65px;
+    padding: 1.4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .notification {
+      position: relative;
+
+      .notification-unread {
+        position: absolute;
+        background: #006eed;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        top: -2px;
+        right: 3px;
+      }
+    }
+  }
+
+  .container {
+    margin: 0 1.4rem;
+
+    .profile-main {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1.5rem;
+
+      .profile-photo {
+        img {
+          object-fit: cover;
+          border-radius: 50%;
+          width: 55px;
+          height: 55px;
+        }
+      }
+
+      .profile-username {
+        h2 {
+          color: #8b949e;
+          font-size: 20px;
+          line-height: 24px;
+          font-weight: 300;
+          font-family: 'Nunito Sans', sans-serif;
+        }
+      }
+    }
+
+    .status {
+      border: 1px solid #8b949e;
+      border-radius: 6px;
+      width: 100%;
+      height: 35px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 2rem;
+
+      img {
+        padding-left: 0.5rem;
+      }
+
+      p {
+        color: #8b949e;
+      }
+    }
+
+    .bio {
+      margin-top: 0.8rem;
+
+      p {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+        letter-spacing: normal;
+      }
+
+      button {
+        background: #21262d;
+        border: 1px solid;
+        border-color: #30363d;
+        margin-top: 1rem;
+        padding: 5px 16px;
+        color: #fff;
+        width: 100%;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        font-family: 'Nunito Sans', sans-serif;
+        cursor: pointer;
+      }
+    }
+
+    .follower-count {
+      display: flex;
+      align-items: center;
+      margin-top: 2rem;
+
+      .followers,
+      .following,
+      .stars {
+        display: flex;
+        align-items: center;
+        gap: 0.2rem;
+        font-size: 14px;
+        line-height: 1.5;
+        font-weight: 500;
+        font-family: 'Nunito Sans', sans-serif;
+      }
+
+      span {
+        color: #fff;
+        padding-right: 0.2rem;
+      }
+
+      p {
+        color: #8b949e;
+      }
+    }
+
+    .followers::after,
+    .following::after {
+      content: '\00B7';
+      color: white;
+      padding-left: 2px;
+    }
+  }
+
+  .nav {
+    background: #161b22;
+    color: #8b949e;
+    margin-top: 3rem;
+    padding: 1.2rem;
+    padding-bottom: 0;
+    overflow-x: auto;
+
+    .nav-items {
+      display: flex;
+      margin-left: 0.5rem;
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      p {
+        font-size: 14px;
+      }
+
+      span {
+        padding: 2px 6px;
+        border-radius: 2em;
+        background: #8b949e33;
+        color: #8b949e;
+        margin-left: 2px;
+        font-size: 12px;
+      }
+    }
+
+    #repo {
+      color: #c9d1d9 !important;
+      border-bottom: 3px solid #f9826c;
+      padding-bottom: 10px;
+      width: 138px;
+      text-align: center;
+    }
+  }
+
+  .repo-button {
+    margin-top: 1.5rem;
+
+    button {
+      width: 100%;
+      background: #238636;
+      border: 1px solid #238636;
+      color: #fff;
+      padding: 5px 16px;
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+  }
+
+  .search-repo {
+    margin-top: 2rem;
+
+    input {
+      width: 100%;
+      background: #161b22;
+      border: 2px solid rgb(33, 38, 45);
+      padding: 5px 12px;
+      line-height: 1.25;
+      border-radius: 6px;
+      font-size: 14px;
+      color: #0d1117;
+      font-family: 'Nunito Sans', sans-serif;
+      font-weight: 300;
+    }
+
+    .search-filter {
+      display: flex;
+      flex-direction: row;
+      gap: 0.2rem;
+      margin-top: 0.5rem;
+
+      .filter {
+        background: #21262d;
+        border: 1px solid;
+        border-radius: 6px;
+        padding: 2px 8px;
+
+        p {
+          color: #c9d1d9;
+          font-size: 14px;
+          font-weight: 500;
+          font-family: 'Nunito Sans', sans-serif;
+          padding-left: 8px;
+
+          &::after {
+            content: url(images/arrow-down.svg);
+            display: inline-block;
+            vertical-align: middle;
+            padding-top: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .repos {
+    margin-top: 1rem;
+    padding: 3rem 0;
+    border-top: 1px solid #30363d;
+    border-bottom: 1px solid #30363d;
+    position: relative;
+
+    .repo-details {
+      .repo-name {
+        h2 {
+          color: #58a6ff;
+          font-size: 20px;
+          line-height: 20px;
+          font-family: 'Nunito Sans', sans-serif;
+        }
+      }
+
+      .repo-stack-time {
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+        margin-top: 1.5rem;
+
+        p {
+          color: #8b949e;
+
+          &::before {
+            content: '';
+            background: #563d71;
+            width: 10px;
+            height: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .star-repo {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.4rem;
+    background: #21262d;
+    color: #c9d1d9;
+    padding: 5px 10px;
+    border-radius: 6px;
+
+    p {
+      color: #8b949e;
+    }
+  }
+}
