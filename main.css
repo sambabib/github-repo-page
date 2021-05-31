@@ -12,6 +12,12 @@ body {
   background: #010409;
 }
 
+@media (min-width: 768px) {
+  body {
+    background: #0d1117;
+  }
+}
+
 body p {
   color: white;
 }
@@ -24,6 +30,14 @@ body .search-tip {
   padding: 24px;
   border-radius: 6px;
   margin: 2rem;
+}
+
+@media (min-width: 768px) {
+  body .search-tip {
+    width: 320px;
+    margin: 0 auto;
+    margin-top: 3rem;
+  }
 }
 
 body .search-tip img {
@@ -42,6 +56,14 @@ body .search-bar {
   padding: 2rem;
 }
 
+@media (min-width: 768px) {
+  body .search-bar {
+    width: 420px;
+    margin: 0 auto;
+    margin-top: 3rem;
+  }
+}
+
 body .search-bar form {
   border: 3px solid #161b22;
   border-radius: 6px;
@@ -54,6 +76,12 @@ body .search-bar form input {
   background: #0d1117;
   color: #f0f6fc;
   border: none;
+}
+
+@media (min-width: 768px) {
+  body .search-bar form input {
+    width: 270px;
+  }
 }
 
 body .search-bar form input::-webkit-input-placeholder {
@@ -86,9 +114,11 @@ body .search-bar form button {
   border-radius: 6px;
   background: transparent;
   color: gray;
+  cursor: pointer;
 }
 
 body .header {
+  width: 100%;
   background: #161b22;
   height: 65px;
   padding: 1.4rem;
@@ -105,6 +135,233 @@ body .header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 468px) {
+  body .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 10rem;
+  }
+}
+
+body .header .left-side-header {
+  width: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+body .header .right-side-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  body .header .menu {
+    display: none;
+  }
+}
+
+@media (max-width: 468px) {
+  body .header .logo {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  body .header .logo-mobile {
+    display: none;
+  }
+}
+
+body .header .header-search {
+  width: 250px;
+  border: 2px solid #161b22;
+  background: #0d1117;
+  color: #f0f6fc;
+  border-radius: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (width: 768px) {
+  body .header .header-search {
+    width: 230px !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+body .header .header-search input {
+  width: 240px;
+  padding: 5px 12px;
+  background: #0d1117;
+  color: #f0f6fc;
+  border: none;
+  border-radius: 6px;
+}
+
+@media (width: 768px) {
+  body .header .header-search input {
+    width: 220px;
+  }
+}
+
+body .header .header-search input::-webkit-input-placeholder {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+body .header .header-search input:-ms-input-placeholder {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+body .header .header-search input::-ms-input-placeholder {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+body .header .header-search input::placeholder {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+body .header .header-search span {
+  border: 1px solid gray;
+  padding: 0.1rem 0.5rem;
+  color: gray;
+  border-radius: 3px;
+  font-size: 12px;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+@media (max-width: 468px) {
+  body .header .header-search {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  body .header .header-search {
+    width: 300px;
+  }
+}
+
+body .header .header-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+body .header .header-items p {
+  color: #fff;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+}
+
+@media (max-width: 468px) {
+  body .header .header-items {
+    display: none;
+  }
+}
+
+@media (width: 768px) {
+  body .header .header-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+}
+
+body .header .add-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 468px) {
+  body .header .add-icon {
+    display: none;
+  }
+}
+
+body .header .header-profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 468px) {
+  body .header .header-profile {
+    display: none;
+  }
+}
+
+body .header .header-profile .img-header img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
 }
 
 body .header .notification {
@@ -147,6 +404,12 @@ body .container .profile-main .profile-photo img {
   height: 55px;
 }
 
+body .container .profile-main .profile-username h1 {
+  color: #fff;
+  padding-bottom: 0.3rem;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
 body .container .profile-main .profile-username h2 {
   color: #8b949e;
   font-size: 20px;
@@ -155,31 +418,10 @@ body .container .profile-main .profile-username h2 {
   font-family: 'Nunito Sans', sans-serif;
 }
 
-body .container .status {
-  border: 1px solid #8b949e;
-  border-radius: 6px;
-  width: 100%;
-  height: 35px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 0.5rem;
-  margin-top: 2rem;
-}
-
-body .container .status img {
-  padding-left: 0.5rem;
-}
-
-body .container .status p {
-  color: #8b949e;
+@media (max-width: 468px) {
+  body .container .status {
+    display: none;
+  }
 }
 
 body .container .bio {
@@ -208,6 +450,20 @@ body .container .bio button {
   line-height: 20px;
   font-family: 'Nunito Sans', sans-serif;
   cursor: pointer;
+}
+
+body .container .bio-contact {
+  margin-top: 1.5rem;
+}
+
+body .container .bio-contact #bio-email,
+body .container .bio-contact #bio-url {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
 }
 
 body .container .follower-count {
@@ -254,7 +510,6 @@ body .container .following::after {
 
 body .nav {
   background: #161b22;
-  color: #8b949e;
   margin-top: 3rem;
   padding: 1.2rem;
   padding-bottom: 0;
@@ -262,6 +517,7 @@ body .nav {
 }
 
 body .nav .nav-items {
+  width: 380px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -270,13 +526,14 @@ body .nav .nav-items {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 body .nav .nav-items p {
   font-size: 14px;
+  color: #8b949e;
 }
 
 body .nav .nav-items span {
@@ -289,42 +546,26 @@ body .nav .nav-items span {
 }
 
 body .nav #repo {
-  color: #c9d1d9 !important;
   border-bottom: 3px solid #f9826c;
   padding-bottom: 10px;
-  width: 138px;
+  width: 140px;
   text-align: center;
 }
 
-body .repo-button {
-  margin-top: 1.5rem;
+body .nav #repo-text {
+  color: #c9d1d9 !important;
 }
 
-body .repo-button button {
-  width: 100%;
-  background: #238636;
-  border: 1px solid #238636;
-  color: #fff;
-  padding: 5px 16px;
-  font-size: 14px;
-  font-weight: 500;
-  border-radius: 6px;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 0.4rem;
+@media (max-width: 468px) {
+  body .nav i {
+    display: none;
+  }
 }
 
 body .search-repo {
   margin-top: 2rem;
+  border-bottom: 1px solid #30363d;
+  padding-bottom: 2rem;
 }
 
 body .search-repo input {
@@ -354,9 +595,10 @@ body .search-repo .search-filter {
 
 body .search-repo .search-filter .filter {
   background: #21262d;
-  border: 1px solid;
+  border: 1px solid #21262d;
   border-radius: 6px;
-  padding: 2px 8px;
+  padding: 0 8px;
+  line-height: 1.25;
 }
 
 body .search-repo .search-filter .filter p {
@@ -377,7 +619,6 @@ body .search-repo .search-filter .filter p::after {
 body .repos {
   margin-top: 1rem;
   padding: 3rem 0;
-  border-top: 1px solid #30363d;
   border-bottom: 1px solid #30363d;
   position: relative;
 }
@@ -412,6 +653,13 @@ body .repos .repo-details .repo-stack-time p::before {
   height: 10px;
 }
 
+body .repos .repo-details .repo-stack-time #language-color {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: -2.7rem;
+}
+
 body .star-repo {
   position: absolute;
   right: 0;
@@ -435,5 +683,274 @@ body .star-repo {
 
 body .star-repo p {
   color: #8b949e;
+}
+
+@media (width: 768px) {
+  body .left-side-bio {
+    width: 250px !important;
+    position: relative !important;
+  }
+  body .left-side-bio .profile-main {
+    width: 100px !important;
+  }
+  body .left-side-bio .profile-main .profile-photo img {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  body .left-side-bio .profile-main .profile-username {
+    margin-left: -10rem !important;
+  }
+  body .left-side-bio .status {
+    position: absolute !important;
+    bottom: 220px !important;
+    right: 90px !important;
+  }
+  body .left-side-bio .status img {
+    border-radius: 50%;
+    border: 1px solid #8b949e;
+    padding: 0.2rem;
+    background: #0d1117;
+  }
+  body .left-side-bio .bio,
+  body .left-side-bio .bio-contact,
+  body .left-side-bio .follower-count {
+    margin-left: 0 !important;
+  }
+  body .left-side-bio .follower-count {
+    width: 150px !important;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-wrap: wrap !important;
+        flex-wrap: wrap !important;
+  }
+  body .right-side-repo {
+    position: absolute !important;
+    right: 0 !important;
+    top: 80px !important;
+    width: 580px !important;
+  }
+  body .right-side-repo .search-repo {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-align: baseline !important;
+        -ms-flex-align: baseline !important;
+            align-items: baseline !important;
+    gap: 0.8rem !important;
+  }
+  body .right-side-repo .search-repo input {
+    width: 510px !important;
+  }
+  body .right-side-list {
+    width: 550px !important;
+    position: absolute !important;
+    top: -150px !important;
+    right: 0 !important;
+  }
+}
+
+@media (width: 1024px) {
+  body .left-side-bio {
+    width: 300px !important;
+    position: relative !important;
+    margin-left: 2rem;
+  }
+  body .left-side-bio .profile-main {
+    width: 120px !important;
+  }
+  body .left-side-bio .profile-main .profile-photo img {
+    width: 250px !important;
+    height: 250px !important;
+  }
+  body .left-side-bio .profile-main .profile-username {
+    margin-left: -10rem !important;
+  }
+  body .left-side-bio .status {
+    position: absolute !important;
+    bottom: 260px !important;
+    right: 95px !important;
+  }
+  body .left-side-bio .status img {
+    border-radius: 50%;
+    border: 1px solid #8b949e;
+    padding: 0.2rem;
+    background: #0d1117;
+  }
+  body .left-side-bio .bio,
+  body .left-side-bio .bio-contact,
+  body .left-side-bio .follower-count {
+    margin-left: 0 !important;
+  }
+  body .left-side-bio .follower-count {
+    width: 200px !important;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-wrap: wrap !important;
+        flex-wrap: wrap !important;
+  }
+  body .right-side-repo {
+    position: absolute !important;
+    right: 0 !important;
+    width: 720px !important;
+  }
+  body .right-side-repo .search-repo {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    -webkit-box-align: baseline !important;
+        -ms-flex-align: baseline !important;
+            align-items: baseline !important;
+    gap: 0.8rem !important;
+  }
+  body .right-side-repo .search-repo input {
+    width: 390px !important;
+  }
+  body .right-side-repo .search-repo .search-filter {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    -webkit-box-align: baseline !important;
+        -ms-flex-align: baseline !important;
+            align-items: baseline !important;
+  }
+  body .right-side-list {
+    width: 690px !important;
+    position: absolute !important;
+    right: 0 !important;
+  }
+}
+
+@media (min-width: 768px) {
+  body .left-side-bio {
+    width: 500px;
+    position: relative;
+  }
+  body .left-side-bio .profile-main {
+    width: 400px;
+    margin-left: 4rem;
+    margin-top: 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .left-side-bio .profile-main .profile-photo img {
+    width: 280px;
+    height: 280px;
+  }
+  body .left-side-bio .profile-main .profile-username {
+    margin-left: -22rem;
+  }
+  body .left-side-bio .status {
+    position: absolute;
+    bottom: 240px;
+    right: 142px;
+  }
+  body .left-side-bio .status img {
+    border-radius: 50%;
+    border: 1px solid #8b949e;
+    padding: 0.5rem;
+    background: #0d1117;
+  }
+  body .left-side-bio .bio,
+  body .left-side-bio .bio-contact,
+  body .left-side-bio .follower-count {
+    margin-left: 6.5rem;
+  }
+  body .right-side-repo {
+    position: absolute;
+    right: 30px;
+    top: 80px;
+  }
+  body .right-side-repo .nav {
+    background: transparent;
+  }
+  body .right-side-repo .nav .nav-items {
+    width: 500px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    gap: 1rem;
+  }
+  body .right-side-repo .nav #overview,
+  body .right-side-repo .nav #repo,
+  body .right-side-repo .nav #projects,
+  body .right-side-repo .nav #packages {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 0.5rem;
+  }
+  body .right-side-repo .search-repo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    gap: 1.9rem;
+  }
+  body .right-side-repo .search-repo input {
+    width: 598px;
+  }
+  body .right-side-repo .search-repo .search-filter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 0.5rem;
+  }
+  body .repos {
+    border-bottom: none;
+    padding-top: 4rem;
+  }
+  body .right-side-list {
+    width: 900px;
+    position: absolute;
+    top: -360px;
+    right: 30px;
+    border-bottom: 1px solid #30363d;
+    padding: 2rem 0;
+  }
+  body .right-side-list .star-repo {
+    top: 28px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

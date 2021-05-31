@@ -10,7 +10,11 @@ body {
   height: 100%;
   width: 100%;
   background: #010409;
-  
+
+  @media (min-width: 768px) {
+    background: #0d1117;
+  }
+
   p {
     color: white;
   }
@@ -24,10 +28,16 @@ body {
     border-radius: 6px;
     margin: 2rem;
 
+    @media (min-width: 768px) {
+      width: 320px;
+      margin: 0 auto;
+      margin-top: 3rem;
+    }
+
     img {
-        display: inline-block;
-        vertical-align: middle;
-        padding-right: 5px;
+      display: inline-block;
+      vertical-align: middle;
+      padding-right: 5px;
     }
 
     p {
@@ -40,6 +50,12 @@ body {
   .search-bar {
     padding: 2rem;
 
+    @media (min-width: 768px) {
+      width: 420px;
+      margin: 0 auto;
+      margin-top: 3rem;
+    }
+
     form {
       border: 3px solid #161b22;
       border-radius: 6px;
@@ -51,6 +67,10 @@ body {
         background: #0d1117;
         color: #f0f6fc;
         border: none;
+
+        @media (min-width: 768px) {
+          width: 270px;
+        }
 
         &::placeholder {
           font-size: 16px;
@@ -65,11 +85,13 @@ body {
         border-radius: 6px;
         background: transparent;
         color: gray;
+        cursor: pointer;
       }
     }
   }
 
   .header {
+    width: 100%;
     background: #161b22;
     height: 65px;
     padding: 1.4rem;
@@ -77,6 +99,152 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 468px) {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10rem;
+    }
+
+    .left-side-header {
+      width: 800px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .right-side-header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .menu {
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+
+    .logo {
+      @media (max-width: 468px) {
+        display: none;
+      }
+    }
+
+    .logo-mobile {
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+
+    .header-search {
+      width: 250px;
+      border: 2px solid #161b22;
+      background: #0d1117;
+      color: #f0f6fc;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+
+      @media (width: 768px) {
+        width: 230px !important;
+        display: flex;
+        align-items: center;
+      }
+
+      input {
+        width: 240px;
+        padding: 5px 12px;
+        background: #0d1117;
+        color: #f0f6fc;
+        border: none;
+        border-radius: 6px;
+
+        @media (width: 768px) {
+          width: 220px;
+        }
+
+        &::placeholder {
+          font-size: 14px;
+          font-weight: 500;
+          font-family: 'Nunito Sans', sans-serif;
+        }
+      }
+
+      span {
+        border: 1px solid gray;
+        padding: 0.1rem 0.5rem;
+        color: gray;
+        border-radius: 3px;
+        font-size: 12px;
+        font-family: 'Nunito Sans', sans-serif;
+
+        @media (width: 768px) {
+        }
+      }
+
+      @media (max-width: 468px) {
+        display: none;
+      }
+
+      @media (min-width: 768px) {
+        width: 300px;
+      }
+    }
+
+    .header-items {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
+
+      p {
+        color: #fff;
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 14px;
+      }
+
+      @media (max-width: 468px) {
+        display: none;
+      }
+
+      @media (width: 768px) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+      }
+    }
+
+    .add-icon {
+      display: flex;
+      align-items: center;
+
+      @media (max-width: 468px) {
+        display: none;
+      }
+    }
+
+    .header-profile {
+      display: flex;
+
+      @media (max-width: 468px) {
+        display: none;
+      }
+
+      .img-header {
+        img {
+          object-fit: cover;
+          border-radius: 50%;
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
 
     .notification {
       position: relative;
@@ -112,6 +280,12 @@ body {
       }
 
       .profile-username {
+        h1 {
+          color: #fff;
+          padding-bottom: 0.3rem;
+          font-family: 'Nunito Sans', sans-serif;
+        }
+
         h2 {
           color: #8b949e;
           font-size: 20px;
@@ -123,22 +297,8 @@ body {
     }
 
     .status {
-      border: 1px solid #8b949e;
-      border-radius: 6px;
-      width: 100%;
-      height: 35px;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 0.5rem;
-      margin-top: 2rem;
-
-      img {
-        padding-left: 0.5rem;
-      }
-
-      p {
-        color: #8b949e;
+      @media (max-width: 468px) {
+        display: none;
       }
     }
 
@@ -167,6 +327,18 @@ body {
         line-height: 20px;
         font-family: 'Nunito Sans', sans-serif;
         cursor: pointer;
+      }
+    }
+
+    .bio-contact {
+      margin-top: 1.5rem;
+
+      #bio-email,
+      #bio-url {
+        display: flex;
+        gap: 0.5rem;
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 14px;
       }
     }
 
@@ -207,20 +379,21 @@ body {
 
   .nav {
     background: #161b22;
-    color: #8b949e;
     margin-top: 3rem;
     padding: 1.2rem;
     padding-bottom: 0;
     overflow-x: auto;
 
     .nav-items {
+      width: 380px;
       display: flex;
       margin-left: 0.5rem;
       flex-direction: row;
-      justify-content: space-evenly;
+      justify-content: space-between;
 
       p {
         font-size: 14px;
+        color: #8b949e;
       }
 
       span {
@@ -234,36 +407,27 @@ body {
     }
 
     #repo {
-      color: #c9d1d9 !important;
       border-bottom: 3px solid #f9826c;
       padding-bottom: 10px;
-      width: 138px;
+      width: 140px;
       text-align: center;
     }
-  }
 
-  .repo-button {
-    margin-top: 1.5rem;
+    #repo-text {
+      color: #c9d1d9 !important;
+    }
 
-    button {
-      width: 100%;
-      background: #238636;
-      border: 1px solid #238636;
-      color: #fff;
-      padding: 5px 16px;
-      font-size: 14px;
-      font-weight: 500;
-      border-radius: 6px;
-      cursor: pointer;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      gap: 0.4rem;
+    @media (max-width: 468px) {
+      i {
+        display: none;
+      }
     }
   }
 
   .search-repo {
     margin-top: 2rem;
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 2rem;
 
     input {
       width: 100%;
@@ -286,9 +450,10 @@ body {
 
       .filter {
         background: #21262d;
-        border: 1px solid;
+        border: 1px solid #21262d;
         border-radius: 6px;
-        padding: 2px 8px;
+        padding: 0 8px;
+        line-height: 1.25;
 
         p {
           color: #c9d1d9;
@@ -311,7 +476,6 @@ body {
   .repos {
     margin-top: 1rem;
     padding: 3rem 0;
-    border-top: 1px solid #30363d;
     border-bottom: 1px solid #30363d;
     position: relative;
 
@@ -341,6 +505,13 @@ body {
             height: 10px;
           }
         }
+
+        #language-color {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          margin-right: -2.7rem;
+        }
       }
     }
   }
@@ -360,6 +531,263 @@ body {
 
     p {
       color: #8b949e;
+    }
+  }
+
+  @media (width: 768px) {
+    .left-side-bio {
+      width: 250px !important;
+      position: relative !important;
+
+      .profile-main {
+        width: 100px !important;
+
+        .profile-photo {
+          img {
+            width: 100px !important;
+            height: 100px !important;
+          }
+        }
+
+        .profile-username {
+          margin-left: -10rem !important;
+        }
+      }
+
+      .status {
+        position: absolute !important;
+        bottom: 220px !important;
+        right: 90px !important;
+
+        img {
+          border-radius: 50%;
+          border: 1px solid #8b949e;
+          padding: 0.2rem;
+          background: #0d1117;
+        }
+      }
+
+      .bio,
+      .bio-contact,
+      .follower-count {
+        margin-left: 0 !important;
+      }
+
+      .follower-count {
+        width: 150px !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+      }
+    }
+
+    .right-side-repo {
+      position: absolute !important;
+      right: 0 !important;
+      top: 80px !important;
+      width: 580px !important;
+
+      .search-repo {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: baseline !important;
+        gap: 0.8rem !important;
+
+        input {
+          width: 510px !important;
+        }
+      }
+    }
+
+    .right-side-list {
+      width: 550px !important;
+      position: absolute !important;
+      top: -150px !important;
+      right: 0 !important;
+    }
+  }
+
+  @media (width: 1024px) {
+    .left-side-bio {
+      width: 300px !important;
+      position: relative !important;
+      margin-left: 2rem;
+
+      .profile-main {
+        width: 120px !important;
+
+        .profile-photo {
+          img {
+            width: 250px !important;
+            height: 250px !important;
+          }
+        }
+
+        .profile-username {
+          margin-left: -10rem !important;
+        }
+      }
+
+      .status {
+        position: absolute !important;
+        bottom: 260px !important;
+        right: 95px !important;
+
+        img {
+          border-radius: 50%;
+          border: 1px solid #8b949e;
+          padding: 0.2rem;
+          background: #0d1117;
+        }
+      }
+
+      .bio,
+      .bio-contact,
+      .follower-count {
+        margin-left: 0 !important;
+      }
+
+      .follower-count {
+        width: 200px !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+      }
+    }
+
+    .right-side-repo {
+      position: absolute !important;
+      right: 0 !important;
+      width: 720px !important;
+
+      .search-repo {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: baseline !important;
+        gap: 0.8rem !important;
+
+        input {
+          width: 390px !important;
+        }
+
+        .search-filter {
+          display: flex !important;
+          flex-direction: row !important;
+          align-items: baseline !important;
+        }
+      }
+    }
+
+    .right-side-list {
+      width: 690px !important;
+      position: absolute !important;
+      right: 0 !important;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .left-side-bio {
+      width: 500px;
+      position: relative;
+
+      .profile-main {
+        width: 400px;
+        margin-left: 4rem;
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: column;
+
+        .profile-photo {
+          img {
+            width: 280px;
+            height: 280px;
+          }
+        }
+
+        .profile-username {
+          margin-left: -22rem;
+        }
+      }
+
+      .status {
+        position: absolute;
+        bottom: 240px;
+        right: 142px;
+
+        img {
+          border-radius: 50%;
+          border: 1px solid #8b949e;
+          padding: 0.5rem;
+          background: #0d1117;
+        }
+      }
+
+      .bio,
+      .bio-contact,
+      .follower-count {
+        margin-left: 6.5rem;
+      }
+    }
+
+    .right-side-repo {
+      position: absolute;
+      right: 30px;
+      top: 80px;
+
+      .nav {
+        background: transparent;
+
+        .nav-items {
+          width: 500px;
+          display: flex;
+          flex-direction: row;
+          align-items: baseline;
+          justify-content: flex-start;
+          gap: 1rem;
+        }
+
+        #overview,
+        #repo,
+        #projects,
+        #packages {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 0.5rem;
+        }
+      }
+
+      .search-repo {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        gap: 1.9rem;
+
+        input {
+          width: 598px;
+        }
+
+        .search-filter {
+          display: flex;
+          gap: 0.5rem;
+        }
+      }
+    }
+
+    .repos {
+      border-bottom: none;
+      padding-top: 4rem;
+    }
+
+    .right-side-list {
+      width: 900px;
+      position: absolute;
+      top: -360px;
+      right: 30px;
+      border-bottom: 1px solid #30363d;
+      padding: 2rem 0;
+
+      .star-repo {
+        top: 28px;
+      }
     }
   }
 }

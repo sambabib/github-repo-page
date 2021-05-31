@@ -1,14 +1,24 @@
+const form = document.querySelector('#repo-search');
 
 const getRepoQuery = (userInput) => `
 query { 
   user(login: "${userInput}") {
     name
+    login
     avatarUrl
     bio
+    status {
+      message
+    }
+    email
+    websiteUrl
     followers {
       totalCount
     }
     following {
+      totalCount
+    }
+    starredRepositories {
       totalCount
     }
     repositories(first: 20) {
@@ -18,6 +28,7 @@ query {
         forkCount
         primaryLanguage {
           name
+          color
         }
         updatedAt
         licenseInfo {
@@ -29,25 +40,6 @@ query {
 }
 `;
 
-const renderRepo = ({ data }) => {
-  console.log('nice one', data);
-
-  const repoPage = document.querySelector('.repo-page');
-  window.onload = () => {
-    repoPage.innerHTML = `
-      <div class='container'>
-        <div class="profile-main">
-          <div class="profile-photo">
-            <img src="images/eric-cartman.jpg" alt="profile" />
-          </div>
-          <div class="profile-username"><h2>sambabib</h2></div>
-        </div>
-      </div>
-    `;
-    console.log(repoPage);
-  };
-};
-
 const loadRepo = (e) => {
   e.preventDefault();
   let userInput = document.querySelector('.user-input').value;
@@ -57,7 +49,7 @@ const loadRepo = (e) => {
     method: 'post',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: 'bearer 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',
+      Authorization: `bearer ${githubToken}`,
     },
     body: JSON.stringify({
       query: getRepoQuery(userInput),
@@ -71,16 +63,14 @@ const loadRepo = (e) => {
       } else {
         setTimeout(() => {
           window.location.href = 'repo.html';
-        }, 8000);
+        }, 1000);
         return response.json();
       }
     })
-    .then(renderRepo)
-    // console.log('na so', data);
+    .then((data) => {
+      window.localStorage.setItem('user', JSON.stringify(data));
+    })
     .catch((error) => console.error('no be so', error));
 };
 
-window.onload = () => {
-  const form = document.querySelector('#repo-search');
-  form.addEventListener('submit', loadRepo);
-};
+form.addEventListener('submit', loadRepo);

@@ -10,24 +10,76 @@
   <body>
     <!-- header -->
     <div class="header">
-      <div class="menu">
-        <img src="images/menu.png" alt="menu" />
+      <div class="left-side-header">
+        <div class="menu">
+          <img src="images/menu.png" alt="menu" />
+        </div>
+        <div class="logo">
+          <img src="images/github.svg" alt="github icon" />
+        </div>
+        <div class="header-search">
+          <input
+            type="text"
+            id="header-search"
+            placeholder="Search or jump to..."
+          />
+          <span>/</span>
+        </div>
+        <div class="header-items">
+          <p>Pull requests</p>
+          <p>Issues</p>
+          <p>Marketplace</p>
+          <p>Explore</p>
+        </div>
       </div>
-      <div class="logo">
+
+      <div class="logo-mobile">
         <img src="images/github.svg" alt="github icon" />
       </div>
-      <div class="notification">
-        <div class="notification-icon">
-          <img src="images/bell.svg" alt="notification bell" />
+
+      <div class="right-side-header">
+        <div class="notification">
+          <div class="notification-icon">
+            <img src="images/bell.svg" alt="notification bell" />
+          </div>
+          <div class="notification-unread"></div>
         </div>
-        <div class="notification-unread"></div>
+        <div class="add-icon">
+          <span>
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 16 16"
+              version="1.1"
+              data-view-component="true"
+              height="16"
+              width="16"
+              class="octicon octicon-plus"
+              fill="#fff"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M7.75 2a.75.75 0 01.75.75V7h4.25a.75.75 0 110 1.5H8.5v4.25a.75.75 0 11-1.5 0V8.5H2.75a.75.75 0 010-1.5H7V2.75A.75.75 0 017.75 2z"
+              ></path>
+            </svg>
+          </span>
+          <span>
+            <img src="images/arrow-down.svg" alt="arrow down" />
+          </span>
+        </div>
+        <div class="header-profile">
+          <div class="img-header">
+            <img src="images/eric-cartman.jpg" alt="header cartman" />
+          </div>
+          <img src="images/arrow-down.svg" alt="arrow down" />
+        </div>
       </div>
     </div>
 
     <!-- loading repo tab -->
-    <div class="repo-page">
-      <!-- <p>hello</p> -->
-    </div>
-    <script defer src="main.js"></script>
+    <div class="repo-page"></div>
+
+    <div class="repo-nodes"></div>
+
+    <script src="repo.js" defer></script>
   </body>
 </html>
